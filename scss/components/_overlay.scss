@@ -5,11 +5,25 @@
     background: linear-gradient(45deg, $main-color, $sec-color);
     height: 100%;
     text-align: center;
-    transition: all 0.6s cubic-bezier(.67,.67,.34,.95);
-    transform: translateX(186%);
+    transition: transform 0.8s cubic-bezier(.19,.74,.15,.84),
+                opacity 0.8s;
     width: 35%;
-    // -webkit-animation: animateWidth 0.6s forwards;
-    // animation: animateWidth 0.6s forwards;
+    position: absolute;
+    .go-login & {
+        // right: 0;
+        transform: translateX(0%);
+    }
+    .go-register & {
+
+        // left: 0;
+        transform: translateX(100%); 
+    }
+}
+
+.animateWidth {
+    -webkit-animation: animateWidth 0.8s ease-in-out both;
+            animation: animateWidth 0.8s ease-in-out both;
+            animation-delay: 0.15s;
 }
 
 .overlay {
@@ -23,6 +37,9 @@
         margin-bottom: 15px;
     }
     &__desc {
+        max-width: 230px;
+        width: 230px;
+        margin: auto;
         margin-bottom: 15px;
     }
     &--left {
@@ -32,6 +49,10 @@
             z-index: 99;
             opacity: 1;
         }
+        .go-register & {
+            opacity: 0;
+            z-index: -1;
+        }
     }
     &--right {
         opacity: 0;
@@ -39,6 +60,10 @@
         .go-login & {
             opacity: 0;
             z-index: -1;
+        }
+        .go-register & {
+            z-index: 99;
+            opacity: 1;
         }
     }
 }
@@ -48,7 +73,7 @@
         width: 35%;
     }
     50% {
-        width: 70%;
+        width: 50%;
     }
     100% {
         width: 35%;
@@ -59,7 +84,8 @@
         width: 35%;
     }
     50% {
-        width: 70%;
+        width: 50%;
+        // transform: translateX(100%);
     }
     100% {
         width: 35%;

@@ -23,23 +23,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-  .container.go-login .overlay-container {
-    transform: translateX(0%); }
-  .container.go-register .form-register__container {
-    transform: translateX(0%);
-    opacity: 0; }
-  .container.go-register .form-login__container {
-    transform: translateX(0%);
-    opacity: 1;
-    z-index: 0; }
-  .container.go-register .overlay-container {
-    transform: translateX(186%); }
-  .container.go-register .overlay--right {
-    z-index: 99;
-    opacity: 1; }
-  .container.go-register .overlay--left {
-    opacity: 0;
-    z-index: -1; }
 
 /**** Components ****/
 .form__container {
@@ -54,7 +37,7 @@ body {
   text-align: center;
   padding: 25px;
   transform: translateX(0);
-  transition: all 0.6s cubic-bezier(0.67, 0.67, 0.34, 0.95); }
+  transition: transform 0.6s cubic-bezier(0.67, 0.67, 0.34, 0.95), opacity 0.6s ease-in-out; }
 
 .form-login__container {
   z-index: -1; }
@@ -116,9 +99,18 @@ body {
   background: linear-gradient(45deg, #2980b9, #3498db);
   height: 100%;
   text-align: center;
-  transition: all 0.6s cubic-bezier(0.67, 0.67, 0.34, 0.95);
-  transform: translateX(186%);
-  width: 35%; }
+  transition: transform 0.8s cubic-bezier(0.19, 0.74, 0.15, 0.84), opacity 0.8s;
+  width: 35%;
+  position: absolute; }
+  .go-login .overlay-container {
+    transform: translateX(0%); }
+  .go-register .overlay-container {
+    transform: translateX(100%); }
+
+.animateWidth {
+  -webkit-animation: animateWidth 0.8s ease-in-out both;
+  animation: animateWidth 0.8s ease-in-out both;
+  animation-delay: 0.15s; }
 
 .overlay {
   padding: 25px;
@@ -129,6 +121,9 @@ body {
     font-size: 32px;
     margin-bottom: 15px; }
   .overlay__desc {
+    max-width: 230px;
+    width: 230px;
+    margin: auto;
     margin-bottom: 15px; }
   .overlay--left {
     opacity: 0;
@@ -136,18 +131,24 @@ body {
     .go-login .overlay--left {
       z-index: 99;
       opacity: 1; }
+    .go-register .overlay--left {
+      opacity: 0;
+      z-index: -1; }
   .overlay--right {
     opacity: 0;
     z-index: 99; }
     .go-login .overlay--right {
       opacity: 0;
       z-index: -1; }
+    .go-register .overlay--right {
+      z-index: 99;
+      opacity: 1; }
 
 @-webkit-keyframes animateWidth {
   0% {
     width: 35%; }
   50% {
-    width: 70%; }
+    width: 50%; }
   100% {
     width: 35%; } }
 
@@ -155,7 +156,7 @@ body {
   0% {
     width: 35%; }
   50% {
-    width: 70%; }
+    width: 50%; }
   100% {
     width: 35%; } }
 
