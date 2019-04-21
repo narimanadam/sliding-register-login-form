@@ -1,7 +1,10 @@
 /*** Base ****/
-@import './base/variables';
-@import './base/base';
+@import './base/_variables';
+@import './base/_base';
 
 /**** Components ****/
-@import './components/form';
+@import './components/_form';
+@import './components/_overlay';
+@import './components/_list';
+@import './components/_button';
 

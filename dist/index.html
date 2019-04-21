@@ -5,32 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/sliding-form.e31bb0bc.334fe564.css">
     <title>Sliding Sign In &amp; Sign Up Form</title>
-<link rel="stylesheet" href="/sliding-form.e31bb0bc.css"></head>
+<script src="/sliding-form.e31bb0bc.334fe564.js"></script><link rel="stylesheet" href="/sliding-form.e31bb0bc.css"></head>
 
 <body>
-    <div class="container">
-        <div class="form__container">
-            <div class="form-login__container">
-                sign in form
+    <div class="container__wrapper">
+        <div class="container">
+            <div class="form__container form-login__container">
+                <form action="" class="form">
+                    <h3 class="form__heading"> Sign In</h3>
+                    <ul class="list list__inline list__social">
+                        <li class="list__item list__social__item"><a href="#" class="list__link"><i class="list__icon fab fa-facebook-f"></i></a></li>
+                        <li class="list__item list__social__item"><a href="#" class="list__link"><i class="list__icon fab fa-google-plus-g"></i></a>
+                        </li>
+                        <li class="list__item list__social__item"><a href="#" class="list__link"><i class="list__icon fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                    <p class="form__text">or use your account</p>
+                    <input type="email" placeholder="email" class="form__field">
+                    <input type="password" placeholder="password" class="form__field">
+                    <p class="form__text">Forgot your password?</p>
+                    <button type="submit" class="btn btn--main">Sign In</button>
+                </form>
             </div>
-        </div>
-        <div class="form__container">
-            <div class="form-register__container">
-                sign up form
+            <div class="form__container form-register__container">
+                <form action="" class="form">
+                    <h3 class="form__heading"> Create Account</h3>
+                    <ul class="list list__inline list__social">
+                        <li class="list__item list__social__item"><a href="#" class="list__link"><i class="list__icon fab fa-facebook-f"></i></a></li>
+                        <li class="list__item list__social__item"><a href="#" class="list__link"><i class="list__icon fab fa-google-plus-g"></i></a>
+                        </li>
+                        <li class="list__item list__social__item"><a href="#" class="list__link"><i class="list__icon fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                    <p class="form__text">or use your email for registeration</p>
+                    <input type="text" placeholder="name" class="form__field">
+                    <input type="email" placeholder="email" class="form__field">
+                    <input type="password" placeholder="password" class="form__field">
+                    <button type="submit" class="btn btn--main">Sign Up</button>
+                </form>
             </div>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay overlay-left">
-                sign in overlay
-            </div>
-            <div class="overlay overlay-right">
-                register overlay
+            <div class="overlay-container">
+                <div class="overlay overlay--right">
+                    <h3 class="overlay__heading">Hello Friend</h3>
+                    <p class="overlay__desc">Enter your personal details and start journey with us</p>
+                    <button type="button" id="go-register" class="btn btn--main-outline">Sign Up</button>
+                </div>
+                <div class="overlay overlay--left">
+                    <h3 class="overlay__heading">Welcome Back!</h3>
+                    <p class="overlay__desc">Keep connected with us please login with your personal info</p>
+                    <button type="button" id="go-login" class="btn btn--main-outline">Sign In</button>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="/sliding-form.e31bb0bc.js"></script>
+    <script src="/app.c3f9f951.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,67 @@
+.overlay-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, $main-color, $sec-color);
+    height: 100%;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(.67,.67,.34,.95);
+    transform: translateX(186%);
+    width: 35%;
+    // -webkit-animation: animateWidth 0.6s forwards;
+    // animation: animateWidth 0.6s forwards;
+}
+
+.overlay {
+    padding: 25px;
+    color: $white;
+    position: absolute;
+    width: 100%;
+
+    &__heading {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    &__desc {
+        margin-bottom: 15px;
+    }
+    &--left {
+        opacity: 0;
+        z-index: 99;
+        .go-login & {
+            z-index: 99;
+            opacity: 1;
+        }
+    }
+    &--right {
+        opacity: 0;
+        z-index: 99;
+        .go-login & {
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+}
+
+@-webkit-keyframes animateWidth {
+    0% {
+        width: 35%;
+    }
+    50% {
+        width: 70%;
+    }
+    100% {
+        width: 35%;
+    }
+}
+@keyframes animateWidth {
+    0% {
+        width: 35%;
+    }
+    50% {
+        width: 70%;
+    }
+    100% {
+        width: 35%;
+    }
+}
