@@ -124,8 +124,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
       $goRegister = document.querySelector('#go-register'),
       $container = document.querySelector('.container'),
       $overlayContainer = document.querySelector('.overlay-container');
-  $container.classList.add('go-register');
-  $overlayContainer.style.webkitAnimationPlayState = "paused";
 
   _toggleForm = function _toggleForm(_ref) {
     var currentTarget = _ref.currentTarget;
@@ -133,7 +131,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     if ($container.classList.contains('go-register')) {
       $container.classList.remove('go-register');
       $container.classList.add('go-login');
-      $overlayContainer.style.webkitAnimationPlayState = "running";
       $overlayContainer.classList.add('animateWidth');
       $overlayContainer.addEventListener('webkitTransitionEnd', function () {
         return $overlayContainer.classList.remove('animateWidth');
@@ -142,7 +139,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
       $container.classList.remove('go-login');
       $container.classList.add('go-register');
       $overlayContainer.classList.add('animateWidth');
-      $overlayContainer.style.webkitAnimationPlayState = "running";
       $overlayContainer.addEventListener('webkitTransitionEnd', function () {
         return $overlayContainer.classList.remove('animateWidth');
       });
@@ -180,7 +176,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51942" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53071" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

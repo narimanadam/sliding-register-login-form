@@ -1,30 +1,23 @@
 .overlay-container {
+    position: absolute;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, $main-color, $sec-color);
     height: 100%;
-    text-align: center;
-    transition: transform 0.8s cubic-bezier(.19,.74,.15,.84),
-                opacity 0.8s;
     width: 35%;
-    position: absolute;
+    text-align: center;
+    background: linear-gradient(45deg, $main-color, $sec-color);
+    transition: all 0.8s cubic-bezier(.67,.67,.34,.95);
     .go-login & {
-        // right: 0;
-        transform: translateX(0%);
+        right: 65%;
     }
     .go-register & {
-
-        // left: 0;
-        transform: translateX(100%); 
+        right: 0;
     }
 }
 
-.animateWidth {
-    -webkit-animation: animateWidth 0.8s ease-in-out both;
-            animation: animateWidth 0.8s ease-in-out both;
-            animation-delay: 0.15s;
-}
+
 
 .overlay {
     padding: 25px;
@@ -36,6 +29,7 @@
         font-size: 32px;
         margin-bottom: 15px;
     }
+
     &__desc {
         max-width: 230px;
         width: 230px;
@@ -54,6 +48,7 @@
             z-index: -1;
         }
     }
+
     &--right {
         opacity: 0;
         z-index: 99;
@@ -65,29 +60,5 @@
             z-index: 99;
             opacity: 1;
         }
-    }
-}
-
-@-webkit-keyframes animateWidth {
-    0% {
-        width: 35%;
-    }
-    50% {
-        width: 50%;
-    }
-    100% {
-        width: 35%;
-    }
-}
-@keyframes animateWidth {
-    0% {
-        width: 35%;
-    }
-    50% {
-        width: 50%;
-        // transform: translateX(100%);
-    }
-    100% {
-        width: 35%;
     }
 }

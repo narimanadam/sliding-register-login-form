@@ -5,20 +5,16 @@
         $container = document.querySelector('.container'),
         $overlayContainer = document.querySelector('.overlay-container');
 
-    $container.classList.add('go-register');
-    $overlayContainer.style.webkitAnimationPlayState = "paused";
     _toggleForm = ({ currentTarget }) => {
         if ($container.classList.contains('go-register')) {
             $container.classList.remove('go-register')
             $container.classList.add('go-login')
-            $overlayContainer.style.webkitAnimationPlayState = "running";
             $overlayContainer.classList.add('animateWidth')
             $overlayContainer.addEventListener('webkitTransitionEnd', () => $overlayContainer.classList.remove('animateWidth'))
         } else {
             $container.classList.remove('go-login')
             $container.classList.add('go-register')
             $overlayContainer.classList.add('animateWidth')
-            $overlayContainer.style.webkitAnimationPlayState = "running";
             $overlayContainer.addEventListener('webkitTransitionEnd', () => $overlayContainer.classList.remove('animateWidth'))
         }
     }

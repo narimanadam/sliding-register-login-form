@@ -1,42 +1,40 @@
 .form__container {
+    position: absolute;
+    z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 65%;
     height: 100%;
-    position: absolute;
-    background: $white;
-    text-align: center;
     padding: 25px;
-    transform: translateX(0);
-    transition: transform 0.6s cubic-bezier(.67,.67,.34,.95), 
-                opacity 0.6s ease-in-out;
-    // transition-delay: 0.1s;
-}
+    text-align: center;
+    background: $white;
+    transition: all 0.6s ease-in;
+    &-login {
+        transition: all 0.6 ease-in;
+        .go-login & {
+            left: 35%;
+            opacity: 0;
+        }
+        .go-register & {
+            left: 0;
+            opacity: 1;
+            z-index: 0;
+        }
+    }
 
-.form-login__container {
-    z-index: -1;
-    .go-login & {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    .go-register & {
-        transform: translateX(0%);
-        opacity: 1;
-        z-index: 0;
-    }
-}
-.form-register__container {
-    z-index: -1;
-    .go-login & {
-        transform: translateX(54%);
-        opacity: 1;
-        z-index: 0;
-    }
-    .go-register & {
-        transform: translateX(0%);
-        opacity: 0;
+    &-register {
+        transition: all 0.6 ease-in;
+        .go-login & {
+            left: 35%;
+            opacity: 1;
+            z-index: 0;
+        }
+        .go-register & {
+            left: 0;
+            opacity: 0;
+        }
     }
 }
 

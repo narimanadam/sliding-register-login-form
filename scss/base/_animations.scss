@@ -1,0 +1,27 @@
+.animateWidth {
+    -webkit-animation: animateWidth 0.8s linear forwards;
+            animation: animateWidth 0.8s linear forwards;
+}
+
+@-webkit-keyframes animateWidth {
+    0% {
+        width: 35%;
+    }
+    20% {
+        width: 50%;
+    }
+    100% {
+        width: 35%;
+    }
+}
+@keyframes animateWidth {
+    0% {
+        width: 35%;
+    }
+    20% {
+        width: 50%;
+    }
+    100% {
+        width: 35%;
+    }
+}
