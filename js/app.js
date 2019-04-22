@@ -5,7 +5,7 @@
         $container = document.querySelector('.container'),
         $overlayContainer = document.querySelector('.overlay-container');
 
-    _toggleForm = ({ currentTarget }) => {
+    _toggleForm = () => {
         if ($container.classList.contains('go-register')) {
             $container.classList.remove('go-register')
             $container.classList.add('go-login')

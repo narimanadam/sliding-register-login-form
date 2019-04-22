@@ -125,9 +125,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
       $container = document.querySelector('.container'),
       $overlayContainer = document.querySelector('.overlay-container');
 
-  _toggleForm = function _toggleForm(_ref) {
-    var currentTarget = _ref.currentTarget;
-
+  _toggleForm = function _toggleForm() {
     if ($container.classList.contains('go-register')) {
       $container.classList.remove('go-register');
       $container.classList.add('go-login');
