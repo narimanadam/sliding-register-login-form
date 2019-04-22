@@ -1,0 +1,21 @@
+.btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    &--main {
+        background: linear-gradient(45deg, $main-color, $sec-color);
+        color: $white;
+    }
+
+    &--main-outline {
+        border: 2px solid linear-gradient(45deg, $main-color, $sec-color);
+        color: $main-color;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus, &:active {
+        outline: 0;
+    }
+}
